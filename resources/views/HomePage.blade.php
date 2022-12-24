@@ -91,7 +91,7 @@
       </div>
   
       <!--Trusted Companies Title -->
-      <div id="companyTitle" style="text-align: center">Trusted Companies</div>
+      <div id="companyTitle" class="mt-4" style="text-align: center">Trusted Companies</div>
     
   
       <div class="container company-logos">
@@ -126,13 +126,10 @@
           </div>
         </div>
       </div>
-  
-      <br />
-      <br />
-      <br />
+
   
       <!-- Job Domains -->
-      <div id="companyTitle" style="text-align: center">Job Domains</div>
+      <div class="mt-5" id="companyTitle" style="text-align: center">Job Domains</div>
   
       <!-- Job Domains Cards -->
   
@@ -238,18 +235,14 @@
         </div>
       </div>
   
-      <br />
-      <br />
-      <br />
-  
       <!-- title what youll get -->
-      <div class="container">
+      <div class="container mt-3">
         <div id="companyTitle">What you'll get</div>
       </div>
   
       <!-- section of what youll get -->
   
-      <div class="container" style="display: flex; flex-wrap: wrap">
+      <div class="container" style="display: flex; flex-wrap: wrap;">
         <div style="width: 100%; margin-top: 2vw; display: flex;">
           <img
             src="https://assets-global.website-files.com/5f030e7bdf54ce3c5daf3964/61f27db471fd1d94ad12c61a_profile-search.svg"
