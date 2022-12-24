@@ -10,7 +10,7 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="{{ asset('css/index.css') }}">
     <style>
       .save-icon{
         transition: 1s;
@@ -36,10 +36,10 @@
       {{-- cards --}}
       <div class="container d-flex flex-wrap justify-content-center" style="gap: 3rem; margin-top: 7rem; margin-bottom: 3rem;">
         
-        <x-available-job-card jobName="Architect & Designer" img="/imgs/microsoft.png"/>
-        <x-available-job-card jobName="Web Developer" img="/imgs/google.png"/>
-        <x-available-job-card jobName="Graphic Designer" img="/imgs/apple.png"/>
-        <x-available-job-card jobName="Product Manager" img="/imgs/amazon.png"/>
+        <x-available-job-card jobName="Architect & Designer" img="/images/microsoft.png"/>
+        <x-available-job-card jobName="Web Developer" img="/images/google.png"/>
+        <x-available-job-card jobName="Graphic Designer" img="/images/apple.png"/>
+        <x-available-job-card jobName="Product Manager" img="/images/amazon.png"/>
 
       </div>
         

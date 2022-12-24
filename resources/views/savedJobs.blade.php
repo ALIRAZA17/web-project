@@ -11,7 +11,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="{{ asset('css/index.css') }}">
 
     <style>
         .delete-icon{
@@ -38,10 +38,10 @@
       <!-- cards -->
       <div class="container d-flex flex-wrap justify-content-center" style="gap: 3rem; margin-top: 7rem; margin-bottom: 3rem;">
         
-        <x-saved-job-card jobName="Graphics Designer" img="/imgs/microsoft.png"/>
-        <x-saved-job-card jobName="Web Developer" img="/imgs/google.png"/>
-        <x-saved-job-card jobName="Graphics Designer" img="/imgs/amazon.png"/>
-        <x-saved-job-card jobName="Graphics Designer" img="/imgs/apple.png"/>
+        <x-saved-job-card jobName="Graphics Designer" img="/images/microsoft.png"/>
+        <x-saved-job-card jobName="Web Developer" img="/images/google.png"/>
+        <x-saved-job-card jobName="Graphics Designer" img="/images/amazon.png"/>
+        <x-saved-job-card jobName="Graphics Designer" img="/images/apple.png"/>
         
       </div>
         

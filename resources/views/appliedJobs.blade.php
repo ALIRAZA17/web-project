@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Applied Jobs</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="{{ asset('css/index.css') }}">
     <style>
         body{
             background: #eee;
@@ -45,14 +45,14 @@
                 <div class="container">
                     <div class="row d-flex flex-wrap justify-content-center" >
                         
-                            <x-applied-job-card jobName="Architect & Designer" dateOfApplication="12/09/2021" img="/imgs/microsoft.png"/>
-                            <x-applied-job-card jobName="Architect & Designer" dateOfApplication="12/09/2021" img="/imgs/google.png"/>
-                            <x-applied-job-card jobName="Architect & Designer" dateOfApplication="12/09/2021" img="/imgs/amazon.png"/>
-                            <x-applied-job-card jobName="Architect & Designer" dateOfApplication="12/09/2021" img="/imgs/apple.png"/>
-                            <x-applied-job-card jobName="Architect & Designer" dateOfApplication="12/09/2021" img="/imgs/google.png"/>
-                            <x-applied-job-card jobName="Architect & Designer" dateOfApplication="12/09/2021" img="/imgs/microsoft.png"/>
-                            <x-applied-job-card jobName="Architect & Designer" dateOfApplication="12/09/2021" img="/imgs/amazon.png"/>
-                            <x-applied-job-card jobName="Graphics Designer" dateOfApplication="12/09/2021" img="/imgs/apple.png"/>
+                            <x-applied-job-card jobName="Architect & Designer" dateOfApplication="12/09/2021" img="/images/microsoft.png"/>
+                            <x-applied-job-card jobName="Architect & Designer" dateOfApplication="12/09/2021" img="/images/google.png"/>
+                            <x-applied-job-card jobName="Architect & Designer" dateOfApplication="12/09/2021" img="/images/amazon.png"/>
+                            <x-applied-job-card jobName="Architect & Designer" dateOfApplication="12/09/2021" img="/images/apple.png"/>
+                            <x-applied-job-card jobName="Architect & Designer" dateOfApplication="12/09/2021" img="/images/google.png"/>
+                            <x-applied-job-card jobName="Architect & Designer" dateOfApplication="12/09/2021" img="/images/microsoft.png"/>
+                            <x-applied-job-card jobName="Architect & Designer" dateOfApplication="12/09/2021" img="/images/amazon.png"/>
+                            <x-applied-job-card jobName="Graphics Designer" dateOfApplication="12/09/2021" img="/images/apple.png"/>
                     
                     </div>		
                 </div>

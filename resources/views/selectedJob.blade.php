@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Apply For Job</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="{{ asset('css/index.css') }}">
   </head>
 
   
@@ -20,7 +20,7 @@
     
       <main>
         <div class="container d-flex justify-content-center">
-            <img src="/imgs/microsoft.png" class="img-fluid rounded-start" alt="company_logo" style="width: 25rem;height:8rem;object-fit: contain;margin-bottom: 4rem;">
+            <img src="/images/microsoft.png" class="img-fluid rounded-start" alt="company_logo" style="width: 25rem;height:8rem;object-fit: contain;margin-bottom: 4rem;">
         </div>
         <div class="d-flex flex-column align-items-center">
           <h1 class="col-12">Architect & Designer</h1>

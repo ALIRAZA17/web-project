@@ -18,7 +18,7 @@
         <div class="d-flex align-items-center" style="gap: 1rem;">
           <span style="color: white;">Abdullah</span>
           <a href="#" class="d-block link-dark text-decoration-none tool-tip nav-item">
-            <img src="imgs/profile.jpg" alt="mdo" width="32" height="32" class="rounded-circle">
+            <img src="images/profile.jpg" alt="mdo" width="32" height="32" class="rounded-circle">
             <span class="tooltiptext">LogOut</span>
           </a>
         </div>
