@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Pacifico&display=swap');
+
+
+
+@font-face {
+  font-family: myfont;
+  src: url(../fonts/PPNeueMontreal-Bold.otf);
+}
+
+
+@font-face {
+  font-family: myfont2;
+  src: url(../fonts/PPNeueMontreal-Book.otf);
+}
+@font-face {
+  font-family: myfont3;
+  src: url(../fonts/PPNeueMontreal-Medium.otf);
+}
+
+@font-face {
+    font-family: myfont4;
+    src: url(../fonts/PPNeueMontreal-Italic.otf);
+}
+
+
+
+.jumbotron_title{
+    font-family: myfont;
+}
+
+.jumbotron{
+        background-color: rgb(235, 247, 255);
+}
+
+.trusted_by{
+    font-family: myfont3;
+}
+
+.job_search_title{
+    font-family: 'Pacifico';
+    font-size: 2.5rem;
+}
+
+.steps{
+    font-family: myfont2;
+    font-size: 1.8rem;
+}
+
+.mywidth{
+  width: 30%;
+}
+
+.card{
+  border: none;
+}
+
+.myIcons img{
+  width: 40%;
+}
+
+.job_domain_divs{ 
+  background-color: rgb(235, 247, 255); 
+}
+

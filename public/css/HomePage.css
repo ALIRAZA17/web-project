@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Pacifico&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.jumbotron{
+    background-image: url(../images/Home_Page_Picture.jpg);
+    filter: brightness(80%);
+    background-size: cover;
+    height: 38vw;
+    text-align: center;
+    font-weight: 500;
+}
+
+.jumbotron2{
+    background-image: url(../images/job_post.jpg);
+    background-size: cover;
+    height: 36vw;
+    text-align: center;
+    font-weight: 500;
+
+}
+
+.title{
+    margin-top: 7vw;
+    font-weight: 600;
+}
+
+#companyTitle{
+    font-family: 'Pacifico', cursive;
+    font-size: 2.9rem;
+}
+
+
+.company-logos{
+    text-align: center;
+    margin-top: 2vw;
+}
+
+.qualities-list{
+    position: relative;
+    left: 8vw;
+}
+
+.mylist{
+    position: relative;
+    left: 3vw;
+}
+
+
+
+

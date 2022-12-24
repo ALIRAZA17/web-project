@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Pacifico&display=swap');
+
+
+@font-face {
+  font-family: myfont;
+  src: url(../fonts/PPNeueMontreal-Bold.otf);
+}
+
+
+@font-face {
+  font-family: myfont2;
+  src: url(../fonts/PPNeueMontreal-Book.otf);
+}
+@font-face {
+  font-family: myfont3;
+  src: url(../fonts/PPNeueMontreal-Medium.otf);
+}
+
+
+.post_job_img{
+    height:150px;
+    width:100%;
+  }
+
+  .hire_tomorrow_span{
+    font-size: 1.3rem;
+    font-family: myfont3;
+    color: grey;
+  }
+  .hire_tomorrow_desc{
+    font-size: 1.2rem;
+    font-family: myfont3;
+  }
+
+
+  #work_title{
+    font-size: 2rem;
+    font-family: myfont;
+  }
+
+  .work_description{
+    font-size: 1.1rem;
+    font-family: myfont2;
+  }
+
+  .job_post_card_link{
+    text-decoration:none;
+    color:black;
+    width: 100%;
+  }
+  
+  div [class^="col-"]{
+    padding-left:5px;
+    padding-right:5px;
+  }
+  .card{
+    transition:0.5s;
+    cursor:pointer;
+  }
+  .card-title{  
+    font-size:15px;
+    transition:1s;
+    cursor:pointer;
+  }
+
+
+  .card-title h5:hover{
+    text-decoration: none; 
+  }
+  .card:hover{
+    transform: scale(1.05);
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.3);
+  }
+  .card-text{
+    height:80px;  
+  }
+  
+  .card::before, .card::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: scale3d(0, 0, 1);
+    transition: transform .3s ease-out 0s;
+    background: rgba(255, 255, 255, 0.1);
+    content: '';
+    pointer-events: none;
+  }
+  .card::before {
+    transform-origin: left top;
+  }
+  .card::after {
+    transform-origin: right bottom;
+  }
+  .card:hover::before, .card:hover::after, .card:focus::before, .card:focus::after {
+    transform: scale3d(1, 1, 1);
+  }
