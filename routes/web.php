@@ -14,10 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -27,5 +23,40 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+
+Route::get('/', function () {
+    return view('HomePage');
+});
+
+Route::get('/availableJobs', function () {
+    return view('availableJobs');
+});
+
+Route::get('/savedJobs', function () {
+    return view('savedJobs');
+});
+
+Route::get('/appliedJobs', function () {
+    return view('appliedJobs');
+});
+
+Route::get('/selectedJob', function () {
+    return view('selectedJob');
+});
+
+Route::get('/postJob', function () {
+    return view('postJob');
+});
+Route::get('/find_work_static', function () {
+    return view('find_work');
+});
+Route::get('/post_jobs_static', function () {
+    return view('Post_Jobs_Static');
+});
+Route::get('/jobs_categories_desc', function () {
+    return view('Categories_desc');
+});
+
 
 require __DIR__.'/auth.php';
