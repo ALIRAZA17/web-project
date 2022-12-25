@@ -7,8 +7,7 @@
         </div>
         <hr>
         <div class="text">
-            <span>Software architects will have at least a bachelor's degree in computer science,
-                 information systems, software engineering or another related field.</span>
+            <span>{{$description}}</span>
         </div>
 
         <hr>

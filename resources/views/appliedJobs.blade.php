@@ -44,15 +44,10 @@
             <div class="box">
                 <div class="container">
                     <div class="row d-flex flex-wrap justify-content-center" >
-                        
-                            <x-applied-job-card jobName="Architect & Designer" dateOfApplication="12/09/2021" img="/images/microsoft.png"/>
-                            <x-applied-job-card jobName="Architect & Designer" dateOfApplication="12/09/2021" img="/images/google.png"/>
-                            <x-applied-job-card jobName="Architect & Designer" dateOfApplication="12/09/2021" img="/images/amazon.png"/>
-                            <x-applied-job-card jobName="Architect & Designer" dateOfApplication="12/09/2021" img="/images/apple.png"/>
-                            <x-applied-job-card jobName="Architect & Designer" dateOfApplication="12/09/2021" img="/images/google.png"/>
-                            <x-applied-job-card jobName="Architect & Designer" dateOfApplication="12/09/2021" img="/images/microsoft.png"/>
-                            <x-applied-job-card jobName="Architect & Designer" dateOfApplication="12/09/2021" img="/images/amazon.png"/>
-                            <x-applied-job-card jobName="Graphics Designer" dateOfApplication="12/09/2021" img="/images/apple.png"/>
+                        @foreach ($appliedJobs as $appliedJob)
+                            <x-applied-job-card jobName="{{$appliedJob->Job_title}}" description="{{$appliedJob->Job_description}}"
+                                dateOfApplication="{{$appliedJob->created_at}}" img="{{$appliedJob->Company_logo}}"/>
+                        @endforeach
                     
                     </div>		
                 </div>

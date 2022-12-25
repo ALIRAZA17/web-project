@@ -13,14 +13,15 @@ use Illuminate\Validation\Rules;
 
 class RegisteredUserController extends Controller
 {
+    
     /**
      * Display the registration view.
      *
      * @return \Illuminate\View\View
      */
-    public function create()
+    public function create(Request $request)
     {
-        return view('auth.register');
+        return view('auth.register', ['role' => $request->role]);
     }
 
     /**
@@ -43,6 +44,7 @@ class RegisteredUserController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'role' => $request->role,
         ]);
 
         event(new Registered($user));

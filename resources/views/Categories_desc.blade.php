@@ -8,58 +8,7 @@
     <link rel="stylesheet" href={{ asset('css/categories.css') }}>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <img width="100px" src="./images/Jobify white.png" alt="" />
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#"
-              >Home <span class="sr-only">(current)</span></a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Find Work</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Job Posts</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Dropdown
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <x-StaticNavbar />
     <div class="container mt-4 col-xxl-8 px-4 py-5">
       <div id="myDIV" class="row flex-lg-row-reverse align-items-center g-5 py-5">
         <div class="col-10 col-sm-8 col-lg-6">
@@ -311,45 +260,7 @@
     </div>
 </div>
 
-<footer
-class="bg-dark text-light pt-4 pt-md-5 border-top"
-style="overflow-x: hidden"
->
-<div class="row">
-  <div class="col-12 col-md">
-    <small class="d-block mb-3 text-muted">© 2017-2022</small>
-  </div>
-  <div class="col-6 col-md">
-    <h5>Features</h5>
-    <ul class="list-unstyled text-small">
-      <li><a class="text-muted" href="#">Cool stuff</a></li>
-      <li><a class="text-muted" href="#">Random feature</a></li>
-      <li><a class="text-muted" href="#">Team feature</a></li>
-      <li><a class="text-muted" href="#">Stuff for developers</a></li>
-      <li><a class="text-muted" href="#">Another one</a></li>
-      <li><a class="text-muted" href="#">Last time</a></li>
-    </ul>
-  </div>
-  <div class="col-6 col-md">
-    <h5>Resources</h5>
-    <ul class="list-unstyled text-small">
-      <li><a class="text-muted" href="#">Resource</a></li>
-      <li><a class="text-muted" href="#">Resource name</a></li>
-      <li><a class="text-muted" href="#">Another resource</a></li>
-      <li><a class="text-muted" href="#">Final resource</a></li>
-    </ul>
-  </div>
-  <div class="col-6 col-md">
-    <h5>About</h5>
-    <ul class="list-unstyled text-small">
-      <li><a class="text-muted" href="#">Team</a></li>
-      <li><a class="text-muted" href="#">Locations</a></li>
-      <li><a class="text-muted" href="#">Privacy</a></li>
-      <li><a class="text-muted" href="#">Terms</a></li>
-    </ul>
-  </div>
-</div>
-</footer>
+<x-footer />
       
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   </body>

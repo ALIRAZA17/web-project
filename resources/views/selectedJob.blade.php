@@ -7,12 +7,23 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('css/index.css') }}">
   </head>
+  <style>
+    .company-link{
+      transition: 1s;
+    }
+    .company-link:hover{
+      transform: scale(1.3);
+    }
+  </style>
 
   
 <body>
+    @php
+      $logged_in_userId = 1;
+    @endphp
     {{-- navbar --}}
     <x-navbar/>
-    
+    @foreach ($jobs as $job)
     <div class="col-lg-8 mx-auto p-4 py-md-5">
       <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
           <span class="fs-4">More About The Job</span>
@@ -20,41 +31,34 @@
     
       <main>
         <div class="container d-flex justify-content-center">
-            <img src="/images/microsoft.png" class="img-fluid rounded-start" alt="company_logo" style="width: 25rem;height:8rem;object-fit: contain;margin-bottom: 4rem;">
+            <img src="{{$job->Company_logo}}" class="img-fluid rounded-start" alt="company_logo" style="width: 25rem;height:8rem;object-fit: contain;margin-bottom: 4rem;">
         </div>
         <div class="d-flex flex-column align-items-center">
-          <h1 class="col-12">Architect & Designer</h1>
-          <p class="fs-5 col-12">Software architects will have at least a bachelor's degree in computer science, information systems, software engineering or another related field.</p>
+          <h1 class="col-12">{{$job->Job_title}}</h1>
+          <p class="fs-5 col-12">{{$job->Job_description}}</p>
         </div>
         <hr class="mb-4">
         
         <div class="container d-flex flex-wrap justify-content-between" style="gap: 5rem;">
-            <span class="d-flex flex-column" style="font-size: 1.25rem;"><b>Company</b><small class="text-muted">Microsoft</small></span>
-            <span class="d-flex flex-column" style="font-size: 1.25rem;"><b>Location</b><small class="text-muted">Islamabad</small></span>
-            <span class="d-flex flex-column" style="font-size: 1.25rem;"><b>Mode</b><small class="text-muted">Hybrid</small></span>
-            <span class="d-flex flex-column" style="font-size: 1.25rem;"><b>Deadline</b><small class="text-muted">11/01/2023</small></span>
-            <span class="d-flex flex-column" style="font-size: 1.25rem;"><b>Category</b><small class="text-muted">Developer</small></span>
-        </div>
+            <span class="d-flex flex-column" style="font-size: 1.25rem;"><b>Company</b><small class="text-muted">{{$job->Company_name}}</small></span>
+            <span class="d-flex flex-column" style="font-size: 1.25rem;"><b>Category</b><small class="text-muted">{{$job->Job_category}}</small></span>
+            <span class="d-flex flex-column" style="font-size: 1.25rem;"><b>Location</b><small class="text-muted">{{$job->Job_location}}</small></span>
+            <span class="d-flex flex-column" style="font-size: 1.25rem;"><b>Mode</b><small class="text-muted">{{$job->Job_mode}}</small></span>
+            <span class="d-flex flex-column" style="font-size: 1.25rem;"><b>Deadline</b><small class="text-muted">{{$job->Job_deadline}}</small></span>
+            <span class="d-flex flex-column" style="font-size: 1.25rem;"><b>Visit Us</b><a href="{{$job->Company_url}}" class="text-secondary company-link">{{$job->Company_name}}</a></span>
+          </div>
         <hr style="margin-bottom: 2rem;">
 
     
         <div class="col-md-12">
             <h2>Skills and Expertise</h2>
             <div class="d-flex flex-wrap justify-content-start" style="max-width: 95%;margin-top: 1rem; gap: 0.75rem;">
-                <h4><span class="badge bg-info">C++</span></h4>
-                <h4><span class="badge bg-info">Java</span></h4>
-                <h4><span class="badge bg-info">Python</span></h4>
-                <h4><span class="badge bg-info">JavaScript</span></h4>
-                <h4><span class="badge bg-info">ReactJS</span></h4>
-                <h4><span class="badge bg-info">NodeJs</span></h4>
-                <h4><span class="badge bg-info">MongoDB</span></h4>
-                <h4><span class="badge bg-info">C++</span></h4>
-                <h4><span class="badge bg-info">Java</span></h4>
-                <h4><span class="badge bg-info">Python</span></h4>
-                <h4><span class="badge bg-info">JavaScript</span></h4>
-                <h4><span class="badge bg-info">ReactJS</span></h4>
-                <h4><span class="badge bg-info">NodeJs</span></h4>
-                <h4><span class="badge bg-info">MongoDB</span></h4>
+                @php
+                    $skills = explode(',',$job->Job_skills); 
+                @endphp
+                @foreach ($skills as $skill)
+                <h4><span class="badge bg-info">{{$skill}}</span></h4>
+                @endforeach
               </div>
         </div>
     
@@ -74,9 +78,12 @@
         <hr style="margin-bottom: 2rem;">
       </main>
       <div class="container d-flex justify-content-center">
-        <button type="button" class="btn btn-info mb-4 my-4 text-white">Apply Now</button>
+        <a href="{{url('appliedJobs/'.$job->id.'/'.$logged_in_userId)}}"><button type="button" class="btn btn-info mb-4 my-4 text-white" onclick="return alert('Application Submitted Successfully!!')">Apply Now</button></a>
       </div>
     </div>
+    
+        
+    @endforeach
     
     {{-- footer --}}
     <x-footer/>

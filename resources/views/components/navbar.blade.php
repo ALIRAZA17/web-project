@@ -1,4 +1,7 @@
 <!-- navbar -->
+@php
+  $logged_in_userId = 1;
+@endphp
 <header class="p-3 mb-3 border-bottom bg-dark">
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
@@ -7,11 +10,10 @@
         </a>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="{{url('/')}}" class="nav-link px-2 link-light nav-item">Home</a></li>
-          <li><a href="{{url('/availableJobs')}}" class="nav-link px-2 link-light nav-item">Browse Jobs</a></li>
-          <li><a href="{{url('/savedJobs')}}" class="nav-link px-2 link-light nav-item">Saved Jobs</a></li>
-          <li><a href="{{url('/appliedJobs')}}" class="nav-link px-2 link-light nav-item">Applied Jobs</a></li>
-          <li><a href="#" class="nav-link px-2 link-light nav-item">Resume Builder</a></li>
+          <li><a href="{{url('/availableJobs')}}" class="nav-link px-2 link-light text-decoration-none nav-item">Browse Jobs</a></li>
+          <li><a href="{{url('savedJobs/'.$logged_in_userId)}}" class="nav-link px-2 link-light text-decoration-none nav-item">Saved Jobs</a></li>
+          <li><a href="{{url('appliedJobs/'.$logged_in_userId)}}" class="nav-link px-2 link-light text-decoration-none nav-item">Applied Jobs</a></li>
+          <li><a href="{{ url('/resume') }}" class="nav-link px-2 text-decoration-none link-light nav-item">Resume Builder</a></li>
         </ul>
 
 

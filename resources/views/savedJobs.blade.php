@@ -24,24 +24,27 @@
   </head>
 
   <body>
+
+      @php
+        $logged_in_userId = 1;
+      @endphp
       {{-- navbar --}}
       <x-navbar/>
  
       <!-- search bar -->
-      <div class="container" style="margin-top: 3rem; max-width: 50%;">
-        <form class="d-flex mt-4" role="search" >
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-secondary" type="submit">Search</button>
-        </form>
+      <div class="container" style="margin-top: 3rem; max-width: 75%;">
+        <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+          <span class="fs-4">Saved Jobs</span>
+        </header>
       </div>
 
       <!-- cards -->
       <div class="container d-flex flex-wrap justify-content-center" style="gap: 3rem; margin-top: 7rem; margin-bottom: 3rem;">
         
-        <x-saved-job-card jobName="Graphics Designer" img="/images/microsoft.png"/>
-        <x-saved-job-card jobName="Web Developer" img="/images/google.png"/>
-        <x-saved-job-card jobName="Graphics Designer" img="/images/amazon.png"/>
-        <x-saved-job-card jobName="Graphics Designer" img="/images/apple.png"/>
+        @foreach ($savedJobs as $saved_job)
+        <x-saved-job-card id="{{$saved_job->id}}" logged_in_userId="{{$logged_in_userId}}" jobName="{{$saved_job->Job_title}}" img="{{$saved_job->Company_logo}}" description="{{$saved_job->Job_description}}" 
+                              skills="{{$saved_job->Job_skills}} " mode="{{$saved_job->Job_mode}}" location="{{$saved_job->Job_location}}"/>
+        @endforeach
         
       </div>
         

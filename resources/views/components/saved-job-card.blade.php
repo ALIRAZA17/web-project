@@ -1,36 +1,41 @@
+@php
+  $logged_in_userId = 1;
+@endphp
+
 <div class="card mb-3 shadow-lg rounded-5 border-secondary col-12 col-sm-12 col-md-12 col-lg-5" style="background-color: rgb(226, 242, 246);">
-    <div class="row g-0 d-flex">
+    <div class="row g-0 d-flex align-items-center">
       <div class="col-md-4">
         <img src="{{$img}}" class="img-fluid rounded-start" alt="company_logo" style="padding: 2rem 1rem 0 1rem;width: 20rem; height:7rem;object-fit: contain;">
       </div>
       <div class="col-md-8">
         <div class="card-body">
           <h5 class="card-title d-flex align-items-center" style="gap: 6rem;">{{$jobName}} 
-            <a href="" class="tool-tip">
+            <a href="{{url('savedJobs/unsave/'.$id.'/'.$logged_in_userId)}}" class="tool-tip" onclick="return alert('Job Unsaved!')">
             <button class="btn" style="font-size: 2rem;color: rgb(159, 43, 43);">
               <i class="fa fa-trash delete-icon"></i>
-              <span class="tooltiptext">Unsave</span>
+              <span class="tooltiptext" style="font-size: 1rem;">Unsave</span>
             </button>
           </a></h5>
           <hr>
           <div class="d-flex flex-wrap justify-content-start" style="max-width: 95%;margin-top: 1rem; gap: 0.75rem;">
-            <h5><span class="badge bg-secondary">C++</span></h5>
-            <h5><span class="badge bg-secondary">Java</span></h5>
-            <h5><span class="badge bg-secondary">Python</span></h5>
-            <h5><span class="badge bg-secondary">JavaScript</span></h5>
-            <h5><span class="badge bg-secondary">ReactJS</span></h5>
-            <h5><span class="badge bg-secondary">NodeJs</span></h5>
-            <h5><span class="badge bg-secondary">MongoDB</span></h5>
+            @php
+                $Job_skills = explode(',',$skills);
+            @endphp
+            @foreach ($Job_skills as $skill)
+              <h5><span class="badge bg-secondary">{{$skill}}</span></h5>    
+            @endforeach
           </div>
           <hr>
+          <h5><span class="badge bg-info" style="max-width: 10rem">{{$mode}} / {{$location}}</span></h5>
+        <hr>
           </div>
       </div>
     </div>
     <div class="container" style="margin: 0 0 1.5rem 1rem;">
-      <p class="card-text">Software architects will have at least a bachelor's degree in computer science, information systems, software engineering or another related field.</p>
+      <p class="card-text" style="width: 90%">{{$description}}</p>
     </div>
     <div class="container d-flex justify-content-end" style="margin: 0 0 1.5rem 1rem;max-width: 90%;">
-      <a href="{{url('/selectedJob')}}" class="btn btn-success rounded-5">Apply Now</a>
+      <a href="{{url('selectedJob/'.$id)}}" class="btn btn-success rounded-5">Apply Now</a>
     </div>
     
   </div>

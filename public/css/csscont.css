@@ -1,0 +1,151 @@
+/* Google Font CDN Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
+}
+.mybody{
+  min-height: 100vh;
+  width: 100%;
+  /* background: #c8e8e9; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mycontainer{
+  width: 85%;
+  background: #fff;
+  border-radius: 6px;
+  padding: 20px 60px 30px 40px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.mycontainer .mycontent{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mycontainer .mycontent .myleft-side{
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  position: relative;
+}
+.mycontent .myleft-side::before{
+  content: '';
+  position: absolute;
+  height: 70%;
+  width: 2px;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #afafb6;
+}
+.mycontent .myleft-side .mydetails{
+  margin: 14px;
+  text-align: center;
+}
+.mycontent .myleft-side .mydetails i{
+  font-size: 30px;
+  color: #3e2093;
+  margin-bottom: 10px;
+}
+.mycontent .myleft-side .mydetails .mytopic{
+  font-size: 18px;
+  font-weight: 500;
+}
+.mycontent .myleft-side .mydetails .mytext-one,
+.mycontent .myleft-side .mydetails .mytext-two{
+  font-size: 14px;
+  color: #afafb6;
+}
+.mycontainer .mycontent .myright-side{
+  width: 75%;
+  margin-left: 75px;
+}
+.mycontent .myright-side .mytopic-text{
+  font-size: 23px;
+  font-weight: 600;
+  color: #3e2093;
+}
+.myright-side .myinput-box{
+  height: 50px;
+  width: 100%;
+  margin: 12px 0;
+}
+.myright-side .myinput-box input,
+.myright-side .myinput-box textarea{
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: #F0F1F8;
+  border-radius: 6px;
+  padding: 0 15px;
+  resize: none;
+}
+.myright-side .mymessage-box{
+  min-height: 110px;
+}
+.myright-side .myinput-box textarea{
+  padding-top: 6px;
+}
+.myright-side .mybutton{
+  display: inline-block;
+  margin-top: 12px;
+}
+.myright-side .mybutton input[type="button"]{
+  color: #fff;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background: #3e2093;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.mybutton input[type="button"]:hover{
+  background: #5029bc;
+}
+
+@media (max-width: 950px) {
+  .mycontainer{
+    width: 90%;
+    padding: 30px 40px 40px 35px ;
+  }
+  .mycontainer .mycontent .myright-side{
+   width: 75%;
+   margin-left: 55px;
+}
+}
+@media (max-width: 820px) {
+  .mycontainer{
+    margin: 40px 0;
+    height: 100%;
+  }
+  .mycontainer .mycontent{
+    flex-direction: column-reverse;
+  }
+ .mycontainer .mycontent .myleft-side{
+   width: 100%;
+   flex-direction: row;
+   margin-top: 40px;
+   justify-content: center;
+   flex-wrap: wrap;
+ }
+ .mycontainer .mycontent .myleft-side::before{
+   display: none;
+ }
+ .mycontainer .mycontent .myright-side{
+   width: 100%;
+   margin-left: 0;
+ }
+}
+

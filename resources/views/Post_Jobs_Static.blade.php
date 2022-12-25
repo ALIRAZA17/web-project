@@ -22,60 +22,7 @@
   </head>
   <body class="mybody">
     <!-- Navbar -->
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <img width="100px" src="./images/Jobify white.png" alt="" />
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#"
-              >Home <span class="sr-only">(current)</span></a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Find Work</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Job Posts</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Dropdown
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
+    <x-StaticNavbar />
     <!-- jumbotron -->
     <div class="jumbotron2" style="color: white">
       <!-- <h1 style="font-size: 5vw" class="display-4 title">Gig Hub</h1> -->
@@ -156,15 +103,14 @@
             <img
               class="p-2"
               width="100%"
-              src="https://static.pexels.com/photos/326424/pexels-photo-326424.jpeg"
+              src="{{ asset('images/card2.jpg') }}"
               alt="Photo of sunset"
             />
             <h5 class="card-title mt-3 pl-2 mb-3" style="font-size: 24px">
-              Development & IT
+              Java Developers
             </h5>
             <p class="card-text pl-2">
-              This is a company that builds websites, web apps and e-commerce
-              solutions.
+              Find specialized Java devlopers that will develop applications and software 
             </p>
           </div>
         </div>
@@ -173,15 +119,14 @@
             <img
               class="p-2"
               width="100%"
-              src="https://static.pexels.com/photos/326424/pexels-photo-326424.jpeg"
+              src="{{ asset('images/card3.jpg') }}"
               alt="Photo of sunset"
             />
             <h5 class="card-title mt-3 pl-2 mb-3" style="font-size: 24px">
-              Development & IT
+              Infrastructure engineers
             </h5>
             <p class="card-text pl-2">
-              This is a company that builds websites, web apps and e-commerce
-              solutions.
+              Hire top class Infrastructure engineers to maintain your IT enviornment.
             </p>
           </div>
         </div>
@@ -190,15 +135,14 @@
             <img
               class="p-2"
               width="100%"
-              src="https://static.pexels.com/photos/326424/pexels-photo-326424.jpeg"
+              src="{{ asset('images/card4.jpg') }}"
               alt="Photo of sunset"
             />
             <h5 class="card-title mt-3 pl-2 mb-3" style="font-size: 24px">
-              Development & IT
+              Data Scientists
             </h5>
             <p class="card-text pl-2">
-              This is a company that builds websites, web apps and e-commerce
-              solutions.
+              Hire proficient Data Scientists to anaylze data for actionable insights for your business.
             </p>
           </div>
         </div>
@@ -207,15 +151,62 @@
             <img
               class="p-2"
               width="100%"
-              src="https://static.pexels.com/photos/326424/pexels-photo-326424.jpeg"
+              src="{{ asset('images/card 6.jpg') }}"
               alt="Photo of sunset"
             />
             <h5 class="card-title mt-3 pl-2 mb-3" style="font-size: 24px">
-              Development & IT
+              SQL developers
             </h5>
             <p class="card-text pl-2">
-              This is a company that builds websites, web apps and e-commerce
-              solutions.
+              Hire SQL developers for designing, creating and maintaining databases
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 mt-4">
+          <div class="card card-block">
+            <img
+              class="p-2"
+              width="100%"
+              src="{{ asset('images/card5.jpg') }}"
+              alt="Photo of sunset"
+            />
+            <h5 class="card-title mt-3 pl-2 mb-3" style="font-size: 24px">
+              iOS developers
+            </h5>
+            <p class="card-text pl-2">
+              Get your iOS app developed by an expert iOS developer with a proficient knowledge
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 mt-4">
+          <div class="card card-block">
+            <img
+              class="p-2"
+              width="100%"
+              src="{{ asset('images/card 7.jpg') }}"
+              alt="Photo of sunset"
+            />
+            <h5 class="card-title mt-3 pl-2 mb-3" style="font-size: 24px">
+              QA engineer
+            </h5>
+            <p class="card-text pl-2">
+              Get specialized tests for your softwares to ensure high quality software production
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 mt-4">
+          <div class="card card-block">
+            <img
+              class="p-2"
+              width="100%"
+              src="{{ asset('images/card8.jpg') }}"
+              alt="Photo of sunset"
+            />
+            <h5 class="card-title mt-3 pl-2 mb-3" style="font-size: 24px">
+              PHP developers
+            </h5>
+            <p class="card-text pl-2">
+              Hire expert PHP developers who excel in designing, testing and implementing softwares using PHP 
             </p>
           </div>
         </div>
@@ -228,62 +219,10 @@
               alt="Photo of sunset"
             />
             <h5 class="card-title mt-3 pl-2 mb-3" style="font-size: 24px">
-              Development & IT
+              JavaScript developers
             </h5>
             <p class="card-text pl-2">
-              This is a company that builds websites, web apps and e-commerce
-              solutions.
-            </p>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 mt-4">
-          <div class="card card-block">
-            <img
-              class="p-2"
-              width="100%"
-              src="https://static.pexels.com/photos/326424/pexels-photo-326424.jpeg"
-              alt="Photo of sunset"
-            />
-            <h5 class="card-title mt-3 pl-2 mb-3" style="font-size: 24px">
-              Development & IT
-            </h5>
-            <p class="card-text pl-2">
-              This is a company that builds websites, web apps and e-commerce
-              solutions.
-            </p>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 mt-4">
-          <div class="card card-block">
-            <img
-              class="p-2"
-              width="100%"
-              src="https://static.pexels.com/photos/326424/pexels-photo-326424.jpeg"
-              alt="Photo of sunset"
-            />
-            <h5 class="card-title mt-3 pl-2 mb-3" style="font-size: 24px">
-              Development & IT
-            </h5>
-            <p class="card-text pl-2">
-              This is a company that builds websites, web apps and e-commerce
-              solutions.
-            </p>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 mt-4">
-          <div class="card card-block">
-            <img
-              class="p-2"
-              width="100%"
-              src="https://static.pexels.com/photos/326424/pexels-photo-326424.jpeg"
-              alt="Photo of sunset"
-            />
-            <h5 class="card-title mt-3 pl-2 mb-3" style="font-size: 24px">
-              Development & IT
-            </h5>
-            <p class="card-text pl-2">
-              This is a company that builds websites, web apps and e-commerce
-              solutions.
+              Hire expert Javascript programmers that can desgin, test and implement softwares using JavaScript
             </p>
           </div>
         </div>
@@ -291,45 +230,7 @@
     </div>
 
     <!-- Footer -->
-    <footer
-      class="bg-dark text-light pt-4 pt-md-5 border-top mt-4"
-      style="overflow-x: hidden"
-    >
-      <div class="row">
-        <div class="col-12 col-md">
-          <small class="d-block mb-3 text-muted">© 2017-2022</small>
-        </div>
-        <div class="col-6 col-md">
-          <h5>Features</h5>
-          <ul class="list-unstyled text-small">
-            <li><a class="text-muted" href="#">Cool stuff</a></li>
-            <li><a class="text-muted" href="#">Random feature</a></li>
-            <li><a class="text-muted" href="#">Team feature</a></li>
-            <li><a class="text-muted" href="#">Stuff for developers</a></li>
-            <li><a class="text-muted" href="#">Another one</a></li>
-            <li><a class="text-muted" href="#">Last time</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-md">
-          <h5>Resources</h5>
-          <ul class="list-unstyled text-small">
-            <li><a class="text-muted" href="#">Resource</a></li>
-            <li><a class="text-muted" href="#">Resource name</a></li>
-            <li><a class="text-muted" href="#">Another resource</a></li>
-            <li><a class="text-muted" href="#">Final resource</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-md">
-          <h5>About</h5>
-          <ul class="list-unstyled text-small">
-            <li><a class="text-muted" href="#">Team</a></li>
-            <li><a class="text-muted" href="#">Locations</a></li>
-            <li><a class="text-muted" href="#">Privacy</a></li>
-            <li><a class="text-muted" href="#">Terms</a></li>
-          </ul>
-        </div>
-      </div>
-    </footer>
+    <x-footer />
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script

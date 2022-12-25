@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Jobify</title>
 
         <!-- Fonts -->
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -27,11 +27,15 @@
                     @auth
                         <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
                     @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
+                    <a href="{{ route('resume') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline mr-10">Create Resume</a>
+                    <a href="{{ route('resume/preview') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline mr-10">Preview Resume</a>
+                    <a href="{{ route('job') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline mr-10">Job post</a>
+                    <a href="{{ route('apply') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline mr-10">Apply job</a>
+                        <a href="{{ route('login') }}" class=" ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-                        @endif
+                        {{-- @if (Route::has('register')) --}}
+                            <a href="{{ route('role') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Sign Up</a>
+                        {{-- @endif --}}
                     @endauth
                 </div>
             @endif

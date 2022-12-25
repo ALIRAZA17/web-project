@@ -18,59 +18,7 @@
   <body class="mybody">
     <!-- Navbar -->
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <img width="100px" src="./images/Jobify white.png" alt="">
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#"
-              >Home</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Job Posts</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Dropdown
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
+    <x-StaticNavbar />
 
       <!-- jumbotron -->
       <div class="jumbotron" style="color: white;">
@@ -80,7 +28,6 @@
           Forget the old rules. You can have the best people. Right now. Right
           here.
         </p>
-        <hr class="my-4" />
         <p>
           Access the top 1% of talent on Upwork, and a full suite of hybrid
           workforce management tools. This is how innovation works now.
@@ -91,7 +38,7 @@
       </div>
   
       <!--Trusted Companies Title -->
-      <div id="companyTitle" class="mt-4" style="text-align: center">Trusted Companies</div>
+      <div id="companyTitle" style="text-align: center">Trusted Companies</div>
     
   
       <div class="container company-logos">
@@ -126,10 +73,13 @@
           </div>
         </div>
       </div>
-
+  
+      <br />
+      <br />
+      <br />
   
       <!-- Job Domains -->
-      <div class="mt-5" id="companyTitle" style="text-align: center">Job Domains</div>
+      <div id="companyTitle" style="text-align: center">Job Domains</div>
   
       <!-- Job Domains Cards -->
   
@@ -146,11 +96,10 @@
           <div class="my_card">
             <div class="card_box">
               <div class="card_content">
-                <h2>01</h2>
-                <h3>Card One</h3>
+
+                <h3>Development & IT</h3>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
-                  totam velit? Iure nemo labore inventore?
+                  Find tailored Software Developers to create, design, deploy or maintain your software. 
                 </p>
                 <a href="#">Read More</a>
               </div>
@@ -162,11 +111,10 @@
           <div class="my_card">
             <div class="card_box">
               <div class="card_content">
-                <h2>01</h2>
-                <h3>Card One</h3>
+              
+                <h3>Design & Creative</h3>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
-                  totam velit? Iure nemo labore inventore?
+                  Get your logos designed by world class independent designers.
                 </p>
                 <a href="#">Read More</a>
               </div>
@@ -177,11 +125,10 @@
           <div class="my_card">
             <div class="card_box">
               <div class="card_content">
-                <h2>01</h2>
-                <h3>Card One</h3>
+                
+                <h3>Sales & Marketing</h3>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
-                  totam velit? Iure nemo labore inventore?
+                 Rocket your product sales by hiring world class marketers
                 </p>
                 <a href="#">Read More</a>
               </div>
@@ -192,11 +139,9 @@
           <div class="my_card">
             <div class="card_box">
               <div class="card_content">
-                <h2>01</h2>
-                <h3>Card One</h3>
+                <h3>Writing & Translation</h3>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
-                  totam velit? Iure nemo labore inventore?
+                  Hire professional writers and translators for any writing & translating tasks
                 </p>
                 <a href="#">Read More</a>
               </div>
@@ -207,11 +152,9 @@
           <div class="my_card">
             <div class="card_box">
               <div class="card_content">
-                <h2>01</h2>
-                <h3>Card One</h3>
+                <h3>Admin & Customer Support</h3>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
-                  totam velit? Iure nemo labore inventore?
+                 Ensure a smooth running business by hiring a proficient admin as well as employees for customer support 
                 </p>
                 <a href="#">Read More</a>
               </div>
@@ -222,11 +165,10 @@
           <div class="my_card">
             <div class="card_box">
               <div class="card_content">
-                <h2>01</h2>
-                <h3>Card One</h3>
+           
+                <h3>Voice Over</h3>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
-                  totam velit? Iure nemo labore inventore?
+                  Get your broadcast, film or audio book voice-over by individual voice artists
                 </p>
                 <a href="#">Read More</a>
               </div>
@@ -235,14 +177,18 @@
         </div>
       </div>
   
+      <br />
+      <br />
+      <br />
+  
       <!-- title what youll get -->
-      <div class="container mt-3">
+      <div class="container">
         <div id="companyTitle">What you'll get</div>
       </div>
   
       <!-- section of what youll get -->
   
-      <div class="container" style="display: flex; flex-wrap: wrap;">
+      <div class="container" style="display: flex; flex-wrap: wrap">
         <div style="width: 100%; margin-top: 2vw; display: flex;">
           <img
             src="https://assets-global.website-files.com/5f030e7bdf54ce3c5daf3964/61f27db471fd1d94ad12c61a_profile-search.svg"
@@ -268,12 +214,12 @@
           />
   
           <div class="qualities-list">
-            <h3>Discover Quality Talent Fast</h3>
+            <h3>Responsive messaging system</h3>
             <ul class="mylist">
-              <li>Post a job and receive proposals from talent</li>
-              <li>See verified work history and reviews</li>
-              <li>Send 30 invitations to talent per job post</li>
-              <li>Use advanced search filters</li>
+              <li>A secure encrypted system</li>
+              <li>Fast and responsive</li>
+              <li>Easy to use</li>
+              <li>Different fonts</li>
             </ul>
           </div>
         </div>
@@ -291,12 +237,12 @@
             alt=""
           />
           <div class="qualities-list">
-            <h3>Discover Quality Talent Fast</h3>
+            <h3>Customer support</h3>
             <ul class="mylist">
-              <li>Post a job and receive proposals from talent</li>
-              <li>See verified work history and reviews</li>
-              <li>Send 30 invitations to talent per job post</li>
-              <li>Use advanced search filters</li>
+              <li>24/7 customer support available throughout the world</li>
+              <li>All of our agents are well-trained </li>
+              <li>We make sure that you queries are resolved no matter how small or big</li>
+              <li>Feel free to contact us anytime</li>
             </ul>
           </div>
         </div>
@@ -310,12 +256,12 @@
           />
   
           <div class="qualities-list">
-            <h3>Discover Quality Talent Fast</h3>
+            <h3>Secure Payment</h3>
             <ul class="mylist">
-              <li>Post a job and receive proposals from talent</li>
-              <li>See verified work history and reviews</li>
-              <li>Send 30 invitations to talent per job post</li>
-              <li>Use advanced search filters</li>
+              <li>Pay using the worlds famous Visa and Mastercard secure payment methods</li>
+              <li>Payments are authenticated before being sent</li>
+              <li>Make huge payments in one go without any restrictions</li>
+              <li>Various secure ways to make your payment</li>
             </ul>
           </div>
         </div>
@@ -330,42 +276,7 @@
   
       <!-- Footer -->
   
-        <footer class="bg-dark text-light pt-4 pt-md-5 border-top" style="overflow-x: hidden;">
-          <div class="row">
-            <div class="col-12 col-md">
-              <small class="d-block mb-3 text-muted">© 2017-2022</small>
-            </div>
-            <div class="col-6 col-md">
-              <h5>Features</h5>
-              <ul class="list-unstyled text-small">
-                <li><a class="text-muted" href="#">Cool stuff</a></li>
-                <li><a class="text-muted" href="#">Random feature</a></li>
-                <li><a class="text-muted" href="#">Team feature</a></li>
-                <li><a class="text-muted" href="#">Stuff for developers</a></li>
-                <li><a class="text-muted" href="#">Another one</a></li>
-                <li><a class="text-muted" href="#">Last time</a></li>
-              </ul>
-            </div>
-            <div class="col-6 col-md">
-              <h5>Resources</h5>
-              <ul class="list-unstyled text-small">
-                <li><a class="text-muted" href="#">Resource</a></li>
-                <li><a class="text-muted" href="#">Resource name</a></li>
-                <li><a class="text-muted" href="#">Another resource</a></li>
-                <li><a class="text-muted" href="#">Final resource</a></li>
-              </ul>
-            </div>
-            <div class="col-6 col-md">
-              <h5>About</h5>
-              <ul class="list-unstyled text-small">
-                <li><a class="text-muted" href="#">Team</a></li>
-                <li><a class="text-muted" href="#">Locations</a></li>
-                <li><a class="text-muted" href="#">Privacy</a></li>
-                <li><a class="text-muted" href="#">Terms</a></li>
-              </ul>
-            </div>
-          </div>
-        </footer>
+        <x-footer />
       <!-- Optional JavaScript -->
       <!-- jQuery first, then Popper.js, then Bootstrap JS -->
       <script
