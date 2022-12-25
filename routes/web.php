@@ -28,7 +28,7 @@ Route::post('resume/save', [ResumeController::class, 'store'])->name('resume/sav
 Route::delete('resume/{resume}', [ResumeController::class, 'destroy']);
 Route::get('resume/preview', [ResumeController::class, 'show'])->name('resume/preview');
 Route::get('apply', [JobController::class, 'apply'])->name('apply');
-
+Route::get('storeJob', [JobController::class, 'store'])->name('storeJob');
 
 Route::get('/availableJobs', [JobsController::class, 'view_available_jobs']);
 
