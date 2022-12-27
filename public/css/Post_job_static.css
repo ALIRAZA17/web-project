@@ -35,7 +35,11 @@
 
   #work_title{
     font-size: 2rem;
-    font-family: myfont;
+    font-family:myfont;
+  }
+  #Hire_title{
+    font-size: 2rem;
+    font-family:myfont;
   }
 
   .work_description{
@@ -96,3 +100,61 @@
   .card:hover::before, .card:hover::after, .card:focus::before, .card:focus::after {
     transform: scale3d(1, 1, 1);
   }
+
+
+
+  @media screen and (max-width: 1200px) {
+    .hire_tomoroow_img{
+      width: 70% !important;
+    }
+
+    .hire_tomorrow_div{
+      width: 70% !important;
+      margin-top: 4vw;
+    }
+  }
+  @media screen and (max-width: 770px) {
+    .hire_tomoroow_img{
+      width: 100% !important;
+    }
+
+    .hire_tomorrow_div{
+      width: 100% !important;
+      margin-top: 4vw;
+    }
+
+    .hire_tomorrow_span{
+      font-size: 1.1rem;
+    }
+    .hire_tomorrow_desc{
+      font-size: 1.1rem;
+    }
+  }
+
+
+  @media screen and (max-width: 600px) {
+    #Hire_title{
+      text-align: center;
+      font-size:1.1rem ;
+    }
+
+    .hire_tomorrow_span{
+      text-align: center;
+      font-size: 0.9rem;
+    }
+    .hire_tomorrow_desc{
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    .hire_tomorrow_btn{
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+
+
+  }
+
+    

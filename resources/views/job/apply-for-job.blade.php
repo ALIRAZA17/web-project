@@ -1,4 +1,7 @@
 <x-guest-layout>
+    @php
+        $logged_in_userId = Auth::user()->id;
+      @endphp
     <x-card>
         <x-slot name="logo">
             <img src="{{ asset('img/jobify.png') }}" alt="Company Logo">
@@ -8,7 +11,7 @@
             <h1>Apply for Job</h1>
         </div>
 
-        <form method="POST" action="{{ route('job/apply') }}" enctype="multipart/form-data">
+        <form method="POST" action="{{ route('storeJob') }}" enctype="multipart/form-data">
             @csrf
 
             <!-- Name -->
@@ -56,7 +59,9 @@
                 <x-input-label for="letter" :value="__('Cover Letter')" />
                 <textarea id="letter" class="block rounded-md border-gray-300 mt-3 w-full" type="text" name="letter" rows="5" :value="old('letter')" required placeholder="e.g. Explain why you're qualified for the job, show that your skills and experience match the skills and experience needed to do the job, etc" ></textarea>
                 <x-input-error :messages="$errors->get('letter')" class="mt-2" />
-            </div>
+                </div>
+
+                <input type="hidden" name="job_id" value={{ $job_id }}>
 
 
 

@@ -11,7 +11,8 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href={{ asset('css/find_work.css') }} />
-    <title>Hello, world!</title>
+    <link rel="icon" href="{{asset('img/jobify title.png')}}"/>
+    <title>Jobify</title>
   </head>
   <body>
 
@@ -26,7 +27,7 @@
             marketplace. Build rewarding relationships in the world’s Work
             Marketplace. Your home for the work you want.</p>
           <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
-            <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold">Sign Up</button>
+            <a href="{{ url('/role') }}"><button type="button" style="background-color: #38b6ff;color:white;font-weight:500; border:none;" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold">Sign Up</button></a>
           </div>
         </div>
         <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
@@ -94,58 +95,58 @@
             <div class="col p-4 d-flex flex-column position-static">
               <h3 class="mb-0">Development & IT</h3>
               <div class="mb-1 text-muted">20k+ jobs posted weekly</div>
-              <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="stretched-link">Check Out</a>
+              <p class="card-text mb-auto">Get your logos designed by world class independent designers.</p>
+              <a href="{{ url('categories_desc') }}" class="stretched-link">Read more</a>
             </div>
           </div>
         </div>
         <div class="col-md-6">
           <div class="row job_domain_divs g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
             <div class="col p-4 d-flex flex-column position-static">
-              <h3 class="mb-0">Development & IT</h3>
+              <h3 class="mb-0">Creative & Design</h3>
               <div class="mb-1 text-muted">20k+ jobs posted weekly</div>
-              <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="stretched-link">Check Out</a>
+              <p class="card-text mb-auto"> Get your logos designed by world class independent designers. </p>
+              <a href="{{ url('categories_desc') }}" class="stretched-link">Read more</a>
             </div>
           </div>
         </div>
         <div class="col-md-6">
           <div class="row job_domain_divs g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
             <div class="col p-4 d-flex flex-column position-static">
-              <h3 class="mb-0">Development & IT</h3>
-              <div class="mb-1 text-muted">20k+ jobs posted weekly</div>
-              <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="stretched-link">Check Out</a>
+              <h3 class="mb-0">Sales & Marketing</h3>
+              <div class="mb-1 text-muted">5k+ jobs posted weekly</div>
+              <p class="card-text mb-auto">Get your logos designed by world class independent designers.</p>
+              <a href="{{ url('categories_desc') }}" class="stretched-link">Read more</a>
             </div>
           </div>
         </div>
         <div class="col-md-6">
           <div class="row job_domain_divs g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
             <div class="col p-4 d-flex flex-column position-static">
-              <h3 class="mb-0">Development & IT</h3>
+              <h3 class="mb-0">Finance & Accounting</h3>
               <div class="mb-1 text-muted">20k+ jobs posted weekly</div>
-              <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="stretched-link">Check Out</a>
+              <p class="card-text mb-auto">Get your logos designed by world class independent designers.</p>
+              <a href="{{ url('categories_desc') }}" class="stretched-link">Read more</a>
             </div>
           </div>
         </div>
         <div class="col-md-6">
           <div class="row job_domain_divs g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
             <div class="col p-4 d-flex flex-column position-static">
-              <h3 class="mb-0">Development & IT</h3>
+              <h3 class="mb-0">HR & Training</h3>
               <div class="mb-1 text-muted">20k+ jobs posted weekly</div>
-              <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="stretched-link">Check Out</a>
+              <p class="card-text mb-auto">Get your logos designed by world class independent designers.</p>
+              <a href="{{ url('categories_desc') }}" class="stretched-link">Read more</a>
             </div>
           </div>
         </div>
         <div class="col-md-6">
           <div class="row job_domain_divs g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
             <div class="col p-4 d-flex flex-column position-static">
-              <h3 class="mb-0">Development & IT</h3>
+              <h3 class="mb-0">Writing & Translation</h3>
               <div class="mb-1 text-muted">20k+ jobs posted weekly</div>
-              <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="stretched-link">Check Out</a>
+              <p class="card-text mb-auto">Get your logos designed by world class independent designers.</p>
+              <a href="{{ url('categories_desc') }}" class="stretched-link">Read more</a>
             </div>
           </div>
         </div>

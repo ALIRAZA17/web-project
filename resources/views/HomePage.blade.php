@@ -12,6 +12,8 @@
 
     <link rel="stylesheet" href={{ asset('css/HomePage.css') }}>
     <link rel="stylesheet" href={{ asset('css/mycards.css') }}>
+    <link rel="stylesheet" href="{{ asset('css/index.css') }}">
+    <link rel="icon" href="{{asset('img/jobify title.png')}}"/>
 
     <title>Jobify</title>
   </head>
@@ -23,22 +25,22 @@
       <!-- jumbotron -->
       <div class="jumbotron" style="color: white;">
         <!-- <h1 style="font-size: 5vw" class="display-4 title">Gig Hub</h1> -->
-        <img src="{{ asset('images/Jobify psd.png') }}" width="250px" class="title" alt="">
-        <p class="lead">
-          Forget the old rules. You can have the best people. Right now. Right
-          here.
+        <img src="{{ asset('images/Jobify home.png') }}" width="250px" class="title" alt="">
+        <p class="jumbotronHeading" style="font-weight: bold;font-size: 2rem" class="lead">
+          Let's Digitalize the Hiring Process
         </p>
-        <p>
+        <p class="jumbotronFirstPara" 
+         style="font-weight: bold;font-size: 1.2rem">
           Access the top 1% of talent on Upwork, and a full suite of hybrid
           workforce management tools. This is how innovation works now.
         </p>
         <p class="lead">
-          <a class="btn btn-danger btn-md" href="#" role="button">Get Started</a>
+          <a class="jumbotron_btn btn btn-md " style="background-color: #38b6ff;color:white;font-weight:500;" href="{{ url('/role') }}" role="button">Get Started</a>
         </p>
       </div>
   
       <!--Trusted Companies Title -->
-      <div id="companyTitle" style="text-align: center">Trusted Companies</div>
+      <div id="companyTitle" class="mt-4" style="text-align: center">Trusted Companies</div>
     
   
       <div class="container company-logos">
@@ -50,21 +52,21 @@
               alt="Responsive image"
             />
           </div>
-          <div class="col-sm">
+          <div class="col-sm comapnies_margin">
             <img
               src="https://assets-global.website-files.com/5f030e7bdf54ce3c5daf3964/6080bb0ff04903bb884fc2b0_Airbnb.svg"
               class="img-fluid"
               alt="Responsive image"
             />
           </div>
-          <div class="col-sm">
+          <div class="col-sm comapnies_margin">
             <img
               src="https://assets-global.website-files.com/5f030e7bdf54ce3c5daf3964/6080bb0ff0490343134fc2b5_logo-automatic.svg"
               class="img-fluid"
               alt="Responsive image"
             />
           </div>
-          <div class="col-sm">
+          <div class="col-sm comapnies_margin">
             <img
               src="https://assets-global.website-files.com/5f030e7bdf54ce3c5daf3964/6080bb0ff0490327424fc2b2_Bissell.svg"
               class="img-fluid"
@@ -101,7 +103,7 @@
                 <p>
                   Find tailored Software Developers to create, design, deploy or maintain your software. 
                 </p>
-                <a href="#">Read More</a>
+                <a href="{{ url('/categories_desc') }}">Read More</a>
               </div>
             </div>
           </div>
@@ -116,7 +118,7 @@
                 <p>
                   Get your logos designed by world class independent designers.
                 </p>
-                <a href="#">Read More</a>
+                <a href="{{ url('/categories_desc') }}">Read More</a>
               </div>
             </div>
           </div>
@@ -143,7 +145,7 @@
                 <p>
                   Hire professional writers and translators for any writing & translating tasks
                 </p>
-                <a href="#">Read More</a>
+                <a href="{{ url('/categories_desc') }}">Read More</a>
               </div>
             </div>
           </div>
@@ -156,7 +158,7 @@
                 <p>
                  Ensure a smooth running business by hiring a proficient admin as well as employees for customer support 
                 </p>
-                <a href="#">Read More</a>
+                <a href="{{ url('/categories_desc') }}">Read More</a>
               </div>
             </div>
           </div>
@@ -170,7 +172,7 @@
                 <p>
                   Get your broadcast, film or audio book voice-over by individual voice artists
                 </p>
-                <a href="#">Read More</a>
+                <a href="{{ url('/categories_desc') }}">Read More</a>
               </div>
             </div>
           </div>
@@ -183,91 +185,112 @@
   
       <!-- title what youll get -->
       <div class="container">
-        <div id="companyTitle">What you'll get</div>
+        <div id="companyTitle" class="pointsTitle">What you'll get</div>
       </div>
   
       <!-- section of what youll get -->
   
-      <div class="container" style="display: flex; flex-wrap: wrap">
-        <div style="width: 100%; margin-top: 2vw; display: flex;">
+      <div class="container" style="display: flex; flex-wrap: wrap;overflow-x:hidden;">
+        <div class="imgDesc" style="width: 100%; margin-top: 2vw; display: flex;">
+          <div class="myimg">
           <img
             src="https://assets-global.website-files.com/5f030e7bdf54ce3c5daf3964/61f27db471fd1d94ad12c61a_profile-search.svg"
             alt=""
           />
+          </div>
           <div class="qualities-list" style="width: 100%;">
-            <h3>Discover Quality Talent Fast</h3>
-            <ul class="mylist">
+            <h3 class="pointsHeadings">Discover Quality Talent Fast</h3>
+
+            <div class="listDiv">
+          
+              <ul class="mylist">
               <li>Post a job and receive proposals from talent</li>
               <li>See verified work history and reviews</li>
               <li>Send 30 invitations to talent per job post</li>
               <li>Use advanced search filters</li>
             </ul>
           </div>
+          </div>
         </div>
         <div style="width: 100%">
           <hr />
         </div>
-        <div style="width: 100%; margin-top: 2vw;display: flex;">
+        <div class="imgDesc" style="width: 100%; margin-top: 2vw; display: flex;">
+          <div class="myimg">
           <img
+            src="https://assets-global.website-files.com/5f030e7bdf54ce3c5daf3964/61f27db5e3a57e46f7311a3a_secure-payment.svg"
+            alt=""
+          />
+          </div>
+          <div class="qualities-list" style="width: 100%;">
+            <h3 class="pointsHeadings">Collaboration tools for project tracking</h3>
+
+            <div class="listDiv">
+          
+              <ul class="mylist">
+              <li>Collaboration tools for project tracking</li>
+              <li>Get advanced reporting and tracking</li>
+              <li>Set coworker teams and member permission settings</li>
+              <li>Customize your invoice with activity codes</li>
+            </ul>
+          </div>
+          </div>
+        </div>
+        <div style="width: 100%">
+          <hr />
+        </div>
+       
+        <div style="width: 100%">
+          <hr />
+        </div>
+        <div class="imgDesc" style="width: 100%; margin-top: 2vw; display: flex;">
+          <div class="myimg">
+            <img
             src="https://assets-global.website-files.com/5f030e7bdf54ce3c5daf3964/61f27db4fd39a19644ed23b8_Group%201%20(1).svg"
             alt=""
           />
-  
-          <div class="qualities-list">
-            <h3>Responsive messaging system</h3>
-            <ul class="mylist">
-              <li>A secure encrypted system</li>
+          </div>
+          <div class="qualities-list" style="width: 100%;">
+            <h3 class="pointsHeadings">Responsive messaging system</h3>
+
+            <div class="listDiv">
+              <ul class="mylist">
+              <li>A secure messaging system</li>
               <li>Fast and responsive</li>
               <li>Easy to use</li>
               <li>Different fonts</li>
             </ul>
           </div>
+          </div>
         </div>
-  
-        
-        
         <div style="width: 100%">
           <hr />
         </div>
-        
-        
-        <div style="width: 100%; margin-top: 2vw;display: flex;">
-          <img
+        <div class="imgDesc" style="width: 100%; margin-top: 2vw; display: flex;">
+          <div class="myimg">
+            <img
             src="https://assets-global.website-files.com/5f030e7bdf54ce3c5daf3964/61f27db4f69cca0cd9604a89_avatar-customer-service-female-one.svg"
             alt=""
           />
-          <div class="qualities-list">
-            <h3>Customer support</h3>
-            <ul class="mylist">
+          </div>
+          <div class="qualities-list" style="width: 100%;">
+            <h3 class="pointsHeadings">Customer Support</h3>
+
+            <div class="listDiv">
+          
+              <ul class="mylist">
               <li>24/7 customer support available throughout the world</li>
-              <li>All of our agents are well-trained </li>
+              <li>All of our agents are well-trained</li>
               <li>We make sure that you queries are resolved no matter how small or big</li>
               <li>Feel free to contact us anytime</li>
             </ul>
           </div>
-        </div>
-        <div style="width: 100%">
-          <hr />
-        </div>
-        <div style="width: 100%; margin-top: 2vw;display: flex;">
-          <img
-            src="https://assets-global.website-files.com/5f030e7bdf54ce3c5daf3964/61f27db5e3a57e46f7311a3a_secure-payment.svg"
-            alt=""
-          />
-  
-          <div class="qualities-list">
-            <h3>Secure Payment</h3>
-            <ul class="mylist">
-              <li>Pay using the worlds famous Visa and Mastercard secure payment methods</li>
-              <li>Payments are authenticated before being sent</li>
-              <li>Make huge payments in one go without any restrictions</li>
-              <li>Various secure ways to make your payment</li>
-            </ul>
           </div>
         </div>
         <div style="width: 100%">
           <hr />
         </div>
+
       </div>
   
       <br>

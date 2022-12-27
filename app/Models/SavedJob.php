@@ -10,4 +10,6 @@ class SavedJob extends Model
     protected $table = "saved_jobs";
     protected $primaryKey = "id";
     use HasFactory;
+
+
 }

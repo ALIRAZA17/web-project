@@ -4,8 +4,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
+        <link rel="icon" href="{{asset('img/jobify title.png')}}"/>
 
-        <title>{{ config('app.name', 'Jobify') }}</title>
+        <title>Jobify</title>
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
@@ -37,7 +38,7 @@
     </head>
 
     <body>
-        <div class="font-sans text-gray-900 antialiased">
+        <div class="font-sans text-gray-900 antialiased bg-gray-100">
             {{ $slot }}
         </div>
     </body>

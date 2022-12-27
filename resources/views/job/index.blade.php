@@ -4,7 +4,7 @@
             <img src="{{ asset('img/jobify.png') }}" alt="Company Logo">
         </x-slot>
 
-        <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
+        <form method="POST" action="{{ url('/save') }}" enctype="multipart/form-data">
             @csrf
 
             <!-- Company Name -->
@@ -24,7 +24,7 @@
             <!-- Job location -->
             <div class="mt-4">
                 <x-input-label for="location" :value="__('Job Location')" />
-                <x-text-input id="location" class="block mt-3 w-full" type="text" name="location" :value="old('location')" required placeholder='e.g. Lahore' />
+                <x-text-input id="location" class="block mt-3 w-full" type="text" name="location" :value="old('location')" required placeholder='e.g. Lahore, Pakistan' />
                 <x-input-error :messages="$errors->get('location')" class="mt-2" />
             </div>
 
@@ -35,18 +35,18 @@
                 <div class="flex items-center justify-between mt-2 border border-gray-300 rounded-md shadow-sm px-2 py-2 ">
 
                 <div>
-                    <x-text-input id="remote" class="border-gray-500 mr-1 cursor-pointer hover:border-blue-500" type="radio" name="mode" value="Remote" required />
+                    <x-text-input id="remote" class="border-gray-500 mr-1 cursor-pointer hover:border-blue-500" type="radio" name="mode" value="Remote" required/>
                 <x-input-label for="remote" :value="__('Remote')"/>
                 </div>
 
                 <div>
-                    <x-text-input id="hybrid" class="border-gray-500 mr-1 cursor-pointer hover:border-blue-500" type="radio" name="mode" value="Hybrid" required />
+                    <x-text-input id="hybrid" class="border-gray-500 mr-1 cursor-pointer hover:border-blue-500" type="radio" name="mode" value="Hybrid" required/>
                 <x-input-label for="hybrid" :value="__('Hybrid')"/>
                 </div>
 
 
                 <div>
-                    <x-text-input id="onsite" class="border-gray-500 mr-1 cursor-pointer hover:border-blue-500" type="radio" name="mode" value="Onsite" required />
+                    <x-text-input id="onsite" class="border-gray-500 mr-1 cursor-pointer hover:border-blue-500" type="radio" name="mode" value="Onsite" required/>
                 <x-input-label for="onsite" :value="__('On-Site')"/>
                 </div>
 
@@ -91,14 +91,14 @@
             <!-- tags -->
             <div class="mt-4">
                 <x-input-label for="tags" :value="__('Tags (Comma Separated)')" />
-                <x-text-input id="tags" class="block mt-3 w-full" type="text" name="tags" :value="old('tags')" required placeholder='e.g. php, python, sql' />
+                <x-text-input id="tags" class="block mt-3 w-full" type="text" name="tags" :value="old('tags')" required placeholder='e.g. php,python,sql' />
                 <x-input-error :messages="$errors->get('tags')" class="mt-2" />
             </div>
             
             <!-- Company Logo -->
             <div class="mt-4">
                 <x-input-label for="logo" :value="__('Company Logo')" />
-                <x-text-input id="logo" class="block w-full mt-3 border p-2" type="file" name="logo" accept=".png, .jpeg, .jpg" />
+                <x-text-input id="logo" class="block w-full mt-3 border p-2" type="file" name="logo" required accept=".png, .jpeg, .jpg" />
                 <x-input-error :messages="$errors->get('logo')" class="mt-2" />
             </div>
 

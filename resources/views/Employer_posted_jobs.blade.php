@@ -30,19 +30,19 @@
           $logged_in_userId = Auth::user()->id;
       @endphp
 
-      <x-navbar/>
+      <x-employerNavbar/>
       {{-- navbar --}}
       {{-- search bar --}}
       <div class="container" style="margin-top: 3rem; max-width: 75%;">
         <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
-          <span class="fs-4">Available Jobs</span>
+          <span class="fs-4">Posted Jobs</span>
         </header>
       </div>
 
       {{-- cards --}}
-      <div class="container d-flex flex-wrap justify-content-center available_job_card" style="gap: 3rem; margin-top: 7rem; margin-bottom: 3rem;">
+      <div class="container d-flex flex-wrap justify-content-center" style="gap: 3rem; margin-top: 7rem; margin-bottom: 3rem;">
         @foreach ($jobs as $job)
-        <x-available-job-card id="{{$job->id}}" logged_in_userId="{{$logged_in_userId}}" jobName="{{$job->title}}" img="{{$job->logo ? asset('storage/'. $job->logo) : asset('/img/default.png')}}" description="{{$job->desc}}" 
+        <x-employer_posted_job_card id="{{$job->id}}" logged_in_userId="{{$logged_in_userId}}" jobName="{{$job->title}}" img="{{asset('storage/'. $job->logo)}}" description="{{$job->desc}}" 
                               skills="{{$job->tags}} " mode="{{$job->mode}}" location="{{$job->location}}"/>
         @endforeach
 

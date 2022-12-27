@@ -5,7 +5,7 @@
             <div id="content">
                 <div class="flex items-center justify-between">
                     <div class="flex justify-center items-center mt-6 ml-6">
-                        <img src="{{$resume->photo ? asset('storage/resumes' . $resume->photo) : asset('/img/default.png')}}" style="width: 120px; height:120px; border-radius: 50%; "></div>
+                        <img src="{{$resume->photo ? asset('storage/'. $resume->photo) : asset('/img/default.png')}}" style="width: 120px; height:120px; border-radius: 50%; "></div>
                     <div class="blue-bg-color mt-6 pl-3 pr-6 text-white" style="width: 450px; height:120px; ">
                         <h1 class="text-xl">{{$resume->name}}</h1>
                         <h2 class="">{{$resume->title}}</h2>
@@ -432,13 +432,10 @@
     @endforeach
     
 
-    <div class="mb-10 flex justify-center items-center ">
-        <form method="POST" action="resume/{{$resume->id}}">
-            @csrf
-            @method('DELETE')
-                <button class="mr-10 px-4 py-2 bg-white border border-gray-300 rounded-md font-semibold text-s text-gray-500 uppercase tracking-widest shadow-sm disabled:opacity-50 transition ease-in-out duration-150">Delete</button>
-          </form>
+    <div class="container text-center" style="margin-bottom: 3rem;">
+        <a href="{{url('resume/delete/'.$resume->user_id)}}"><button class="mr-10 px-4 py-2 bg-white border border-gray-300 rounded-md font-semibold text-s text-gray-500 uppercase tracking-widest shadow-sm disabled:opacity-50 transition ease-in-out duration-150">Delete</button>
+        </a>
         <button onclick="generatePDF()" class="px-4 py-2 blue-bg-color border border-transparent rounded-md font-semibold text-s text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150">Download</button>
-    </div>
+        </div>
     
 </x-guest-layout>

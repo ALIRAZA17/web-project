@@ -13,9 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('finance_accounting', function (Blueprint $table) {
+        Schema::create('devit', function (Blueprint $table) {
             $table->id();
-            $table->string('skills');
+            $table->string('skills')->nullable();
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('finance_accounting');
+        Schema::dropIfExists('devit');
     }
 };

@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap demo</title>
+    <link rel="icon" href="{{asset('img/jobify title.png')}}"/>
+    <title>Jobify</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -26,7 +27,7 @@
   <body>
 
       @php
-        $logged_in_userId = 1;
+        $logged_in_userId = Auth::user()->id;
       @endphp
       {{-- navbar --}}
       <x-navbar/>
@@ -38,12 +39,13 @@
         </header>
       </div>
 
+      
       <!-- cards -->
-      <div class="container d-flex flex-wrap justify-content-center" style="gap: 3rem; margin-top: 7rem; margin-bottom: 3rem;">
+      <div class="container d-flex flex-wrap justify-content-center save_job_card" style="gap: 3rem; margin-top: 7rem; margin-bottom: 3rem;">
         
         @foreach ($savedJobs as $saved_job)
-        <x-saved-job-card id="{{$saved_job->id}}" logged_in_userId="{{$logged_in_userId}}" jobName="{{$saved_job->Job_title}}" img="{{$saved_job->Company_logo}}" description="{{$saved_job->Job_description}}" 
-                              skills="{{$saved_job->Job_skills}} " mode="{{$saved_job->Job_mode}}" location="{{$saved_job->Job_location}}"/>
+        <x-saved-job-card id="{{$saved_job->id}}" logged_in_userId="{{$logged_in_userId}}" jobName="{{$saved_job->title}}" img="{{$saved_job->logo ? asset('storage/'. $saved_job->logo) : asset('/img/default.png')}}" description="{{$saved_job->desc}}" 
+                              skills="{{$saved_job->tags}} " mode="{{$saved_job->mode}}" location="{{$saved_job->location}}"/>
         @endforeach
         
       </div>

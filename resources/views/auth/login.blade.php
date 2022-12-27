@@ -15,9 +15,9 @@
                 {{-- <x-input-label for="email" :value="__('Email')" /> --}}
                 <img src="{{ asset('img/email.png') }}" alt="Email badge" class="mr-3 h-12 w-12">
                 <x-text-input id="email" class=" w-full mt-3" type="email" name="email" :value="old('email')" placeholder="Enter your Email Address" required />
-                <x-input-error :messages="$errors->get('email')" class="mt-2" />
+                
             </div>
-
+            <x-input-error :messages="$errors->get('email')" class="mt-2" />
 
             <!-- Password -->
             <div class="flex mt-6 items-center justify-between">
@@ -30,8 +30,9 @@
                                 placeholder="Enter your Password"
                                 required autocomplete="current-password" />
 
-                <x-input-error :messages="$errors->get('password')" class="mt-2" />
+                
             </div>
+            <x-input-error :messages="$errors->get('password')" class="mt-2" />
 
             <!-- Remember Me -->
             <div class="flex items-center justify-between mt-8">

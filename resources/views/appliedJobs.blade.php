@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Applied Jobs</title>
+    <link rel="icon" href="{{asset('img/jobify title.png')}}"/>
+    <title>Jobify</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('css/index.css') }}">
     <style>
@@ -43,10 +44,10 @@
         <main>
             <div class="box">
                 <div class="container">
-                    <div class="row d-flex flex-wrap justify-content-center" >
+                    <div class="row d-flex flex-wrap justify-content-center applied_job_card" >
                         @foreach ($appliedJobs as $appliedJob)
-                            <x-applied-job-card jobName="{{$appliedJob->Job_title}}" description="{{$appliedJob->Job_description}}"
-                                dateOfApplication="{{$appliedJob->created_at}}" img="{{$appliedJob->Company_logo}}"/>
+                            <x-applied-job-card jobName="{{$appliedJob->title}}" description="{{$appliedJob->desc}}"
+                                dateOfApplication="{{$appliedJob->created_at}}" img="{{$appliedJob->logo ? asset('storage/'. $appliedJob->logo) : asset('/img/default.png')}}"/>
                         @endforeach
                     
                     </div>		

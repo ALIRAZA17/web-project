@@ -1,5 +1,5 @@
 @php
-  $logged_in_userId = 1;
+  $logged_in_userId = Auth::user()->id;
 @endphp
 
 <div class="card mb-3 shadow-lg rounded-5 border-secondary col-12 col-sm-12 col-md-12 col-lg-5" style="background-color: rgb(226, 242, 246);">
@@ -26,7 +26,7 @@
             @endforeach
           </div>
           <hr>
-          <h5><span class="badge bg-info" style="max-width: 10rem">{{$mode}} / {{$location}}</span></h5>
+          <h5><span class="badge" style="max-width: 10rem; background-color: #38b6ff;color:white;">{{$mode}} / {{$location}}</span></h5>
         <hr>
           </div>
       </div>

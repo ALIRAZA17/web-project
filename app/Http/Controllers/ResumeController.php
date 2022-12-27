@@ -4,18 +4,33 @@ namespace App\Http\Controllers;
 use App\Models\Resume;
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class ResumeController extends Controller
 {
-    public function create(){
-        return view('resume.create');
+    public function create()
+    {
+        $if_resume = Resume::where('user_id', Auth::user()->id)->first();
+        if ($if_resume) {
+            $resumes = Resume::all();
+            $data = compact('resumes');
+            return view('resume.show')->with($data);
+        } else {
+            return view('resume.create');
+
+        }
     }
 
-
     public function show(Resume $resume){
-        $resumes = Resume::all();
-        $data = compact('resumes');
-        return view('resume.show')->with($data);
+        $resume_to_preview = Resume::where('user_id', Auth::user()->id)->first();
+        if($resume_to_preview){
+            $resumes = Resume::all();
+            $data = compact('resumes');
+            return view('resume.show')->with($data);
+        }else{
+            return view('resume.create');
+        }
+        
     }
 
     public function store(Request $request){
@@ -101,27 +116,29 @@ class ResumeController extends Controller
         ]);
 
         if($request->hasFile('photo')) {
-        $formFields['photo'] = $request->file('photo')->store('resumes');
+        $formFields['photo'] = $request->file('photo')->store('resumes', 'public');
         }
+
+        $formFields['user_id'] = Auth::user()->id;
 
         // $request->user()->resumes()->create($formFields);
         // $formFields['user_id'] = auth()->id();
 
-        Resume::create($formFields);
+        $same_user = Resume::where('user_id', $formFields['user_id'])->first();
+        if(!($same_user)){
+            Resume::create($formFields);
+        }
+        
 
-        return redirect('/');
+        return redirect('/resume/preview');
     }
 
 
     // Delete Listing
-    public function destroy(Resume $resume) {
-        // // Make sure logged in user is owner
-        // if($resume->user_id != auth()->id()) {
-        //     abort(403, 'Unauthorized Action');
-        // }
-        
-        $resume->delete();
-        return redirect('/');
+    public function delete_resume($user_id)
+    {
+        Resume::where('user_id', $user_id)->delete();
+        return view('resume.create');
     }
 
 }

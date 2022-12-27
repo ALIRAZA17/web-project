@@ -17,7 +17,7 @@
     />
     <link rel="stylesheet" href={{ asset('css/HomePage.css') }} />
     <link rel="stylesheet" href={{asset('css/Post_job_static.css')}} />
-
+    <link rel="icon" href="{{asset('img/jobify title.png')}}"/>
     <title>Jobify</title>
   </head>
   <body class="mybody">
@@ -26,16 +26,18 @@
     <!-- jumbotron -->
     <div class="jumbotron2" style="color: white">
       <!-- <h1 style="font-size: 5vw" class="display-4 title">Gig Hub</h1> -->
-      <img src="./images/Jobify psd.png" width="250px" class="title" alt="" />
-      <p class="lead" style="font-weight: bold">
-        Post a job today, hire tomorrow
+      <img src="./images/Jobify home.png" width="250px" class="title" alt="" />
+      <p class="jumbotron2Heading" style="font-weight: bold;font-size: 2rem" class="lead">
+        Post a Job, Hire Tomorrow
       </p>
-      <p style="font-weight: bold">
+      
+        <p class="jumbotron2FirstPara" 
+        style="font-weight: bold;font-size: 1.2rem">
         Connect with talent that gets you, and hire them to take your business
         to the next level.
-      </p>
-      <p class="lead">
-        <a class="btn btn-danger btn-md" href="#" role="button">Get Started</a>
+       </p>
+       <p class="lead">
+        <a class="jumbotron2_btn btn btn-primary btn-md " style="background-color: #38b6ff;color:white;font-weight:500;" href="{{ url('/role') }}" role="button">Get Started</a>
       </p>
     </div>
 
@@ -44,8 +46,8 @@
 
     <!-- Lets Get to Work Portion -->
     <div class="container">
-      <div id="work_title" id="companyTitle">Lets Get to Work</div>
-      <div style="width: 50%">
+      <div id="work_title">Lets Get to Work</div>
+      <div style="width: 50%" class="description_div">
         <p class="work_description">
           Build relationships and create your own Virtual Talent Bench™ for
           quick project turnarounds or big transformations.
@@ -60,11 +62,11 @@
 
     <div class="container">
       <div class="row justify-content-around">
-        <div>
+        <div class="hire_tomoroow_img">
           <img style="border-radius: 15px;width: 100%;" src="./images/working_guy.jpg" alt="" />
         </div>
-        <diV style="width: 40%;">
-          <h2 id="work_title">Post Today, Hire Tomorrow</h2>
+        <diV class="hire_tomorrow_div" style="width: 40%;">
+          <h2 id="Hire_title">Post Today, Hire Tomorrow</h2>
 
           <p class="hire_tomorrow_span">
             Connect with talent that gets you with Talent Marketplace
@@ -77,7 +79,11 @@
             best fit. And you can check profiles, portfolios, and reviews before
             you give someone the green light.
           </p>
-          <button class="btn btn-md btn-primary">Find Talent</button>
+
+          <div class="hire_tomorrow_btn">
+          <a href="{{ url('/role') }}"><button class="btn btn-md btn-primary">Find Talent</button></a>
+
+          </div>
         </diV>
       </div>
     </div>

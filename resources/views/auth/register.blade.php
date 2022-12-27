@@ -11,15 +11,17 @@
             <div>
                 {{-- <x-input-label for="name" :value="__('Name')" /> --}}
                 <x-text-input id="name" class="block mt-5 w-full" type="text" name="name" :value="old('name')" required placeholder='Enter your Full Name' />
-                <x-input-error :messages="$errors->get('name')" class="mt-2" />
+                
             </div>
+            <x-input-error :messages="$errors->get('name')" class="mt-2" />
 
             <!-- Email Address -->
             <div class="mt-4">
                 {{-- <x-input-label for="email" :value="__('Email')" /> --}}
                 <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required placeholder='Enter your Email Address' />
-                <x-input-error :messages="$errors->get('email')" class="mt-2" />
+                
             </div>
+            <x-input-error :messages="$errors->get('email')" class="mt-2" />
 
 
             <!-- Password -->
@@ -32,8 +34,9 @@
                                 placeholder="Enter a Password for your Account"
                                 required autocomplete="new-password" />
 
-                <x-input-error :messages="$errors->get('password')" class="mt-2" />
+               
             </div>
+            <x-input-error :messages="$errors->get('password')" class="mt-2" />
 
             <!-- Confirm Password -->
             <div class="mt-4">
@@ -45,8 +48,9 @@
                                 placeholder="Re-Enter the Password for Confirmation"
                                 required />
 
-                <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
+                
             </div>
+            <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
 
             <!-- Profile Photo -->
             {{-- <div class="flex mt-4 items-center justify-between">

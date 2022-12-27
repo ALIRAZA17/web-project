@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <link rel="icon" href="{{asset('img/jobify title.png')}}"/>
+    <title>Jobify</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href={{ asset('css/categories.css') }}>
   </head>
@@ -12,13 +13,13 @@
     <div class="container mt-4 col-xxl-8 px-4 py-5">
       <div id="myDIV" class="row flex-lg-row-reverse align-items-center g-5 py-5">
         <div class="col-10 col-sm-8 col-lg-6">
-          <img src="./images/working_women.jpg" class="d-block mx-lg-auto rounded img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+          <img src="./images/working_women2.jpg" class="d-block mx-lg-auto rounded img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
         </div>
         <div class="col-lg-6">
-          <h1 class="display-5 fw-bold lh-1 mb-3">Responsive left-aligned hero with image</h1>
-          <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+          <h1 class="display-5 fw-bold lh-1 mb-3">Find a tailor-made Job</h1>
+          <p class="lead">With 7 specific categories having 100k+ listed jobs and major companies listing well paid Jobs as well as hiring individually on contract based Jobs.</p>
           <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-            <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
+           <a href="{{ url('role') }}"><button type="button" class="btn btn-primary btn-lg px-4 me-md-2" style="background-color: #38b6ff;color:white;font-weight:500; border:none;">Get Started</button></a>
           </div>
         </div>
       </div>
@@ -78,7 +79,7 @@
                     <div class="row align-items-center mb-2 d-flex">
                         <div class="col-8">
                             <h2 class="d-flex align-items-center mb-0">
-                                3,243
+                                15K
                             </h2>
                         </div>
                         <div class="col-4 text-right">
@@ -101,7 +102,7 @@
                     <div class="row align-items-center mb-2 d-flex">
                         <div class="col-8">
                             <h2 class="d-flex align-items-center mb-0">
-                                15.07k
+                                10k
                             </h2>
                         </div>
                         <div class="col-4 text-right">
@@ -124,7 +125,7 @@
                     <div class="row align-items-center mb-2 d-flex">
                         <div class="col-8">
                             <h2 class="d-flex align-items-center mb-0">
-                                578
+                                12K
                             </h2>
                         </div>
                         <div class="col-4 text-right">
@@ -147,7 +148,7 @@
                     <div class="row align-items-center mb-2 d-flex">
                         <div class="col-8">
                             <h2 class="d-flex align-items-center mb-0">
-                                $11.61k
+                                5K
                             </h2>
                         </div>
                         <div class="col-4 text-right">
@@ -171,7 +172,7 @@
                   <div class="row align-items-center mb-2 d-flex">
                       <div class="col-8">
                           <h2 class="d-flex align-items-center mb-0">
-                              578
+                              13K
                           </h2>
                       </div>
                       <div class="col-4 text-right">
@@ -195,7 +196,7 @@
                 <div class="row align-items-center mb-2 d-flex">
                     <div class="col-8">
                         <h2 class="d-flex align-items-center mb-0">
-                            15.07k
+                            16K
                         </h2>
                     </div>
                     <div class="col-4 text-right">
@@ -219,7 +220,7 @@
               <div class="row align-items-center mb-2 d-flex">
                   <div class="col-8">
                       <h2 class="d-flex align-items-center mb-0">
-                          $11.61k
+                          14K
                       </h2>
                   </div>
                   <div class="col-4 text-right">
@@ -243,7 +244,7 @@
             <div class="row align-items-center mb-2 d-flex">
                 <div class="col-8">
                     <h2 class="d-flex align-items-center mb-0">
-                        3,243
+                        7K
                     </h2>
                 </div>
                 <div class="col-4 text-right">
@@ -262,6 +263,20 @@
 
 <x-footer />
       
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script
+src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+crossorigin="anonymous"
+></script>
+<script
+src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+crossorigin="anonymous"
+></script>
+<script
+src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+crossorigin="anonymous"
+></script>
   </body>
 </html>

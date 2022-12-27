@@ -20,7 +20,7 @@ class SavedJobsController extends Controller
             );
         }
 
-        return redirect()->action([JobsController::class, 'view_available_jobs']);
+        return redirect()->action([JobController::class, 'view_available_jobs']);
 
     }
 
@@ -35,6 +35,6 @@ class SavedJobsController extends Controller
     public function unsave_job($id, $user_id)
     {
         SavedJob::where('job_id', $id)->where('user_id', $user_id)->delete();
-        return redirect()->action([JobsController::class, 'view_available_jobs']);
+        return redirect()->action([JobController::class, 'view_available_jobs']);
     }
 }

@@ -23,8 +23,9 @@ return new class extends Migration
             $table->string('city');
             $table->string('country');
             $table->string('resume');
-            $table->longText('cover_letter');
-            $table->timestamps();
+            $table->longText('letter');
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent();
         });
     }
 

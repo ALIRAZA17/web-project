@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Apply For Job</title>
+    <link rel="icon" href="{{asset('img/jobify title.png')}}"/>
+    <title>Jobify</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('css/index.css') }}">
   </head>
@@ -19,7 +20,7 @@
   
 <body>
     @php
-      $logged_in_userId = 1;
+      $logged_in_userId = Auth::user()->id;
     @endphp
     {{-- navbar --}}
     <x-navbar/>
@@ -31,21 +32,21 @@
     
       <main>
         <div class="container d-flex justify-content-center">
-            <img src="{{$job->Company_logo}}" class="img-fluid rounded-start" alt="company_logo" style="width: 25rem;height:8rem;object-fit: contain;margin-bottom: 4rem;">
+            <img src="{{$job->logo ? asset('storage/'. $job->logo) : asset('/img/default.png')}}" class="img-fluid rounded-start" alt="company_logo" style="width: 25rem;height:8rem;object-fit: contain;margin-bottom: 4rem;">
         </div>
         <div class="d-flex flex-column align-items-center">
-          <h1 class="col-12">{{$job->Job_title}}</h1>
-          <p class="fs-5 col-12">{{$job->Job_description}}</p>
+          <h1 class="col-12">{{$job->title}}</h1>
+          <p class="fs-5 col-12">{{$job->desc}}</p>
         </div>
         <hr class="mb-4">
         
         <div class="container d-flex flex-wrap justify-content-between" style="gap: 5rem;">
-            <span class="d-flex flex-column" style="font-size: 1.25rem;"><b>Company</b><small class="text-muted">{{$job->Company_name}}</small></span>
-            <span class="d-flex flex-column" style="font-size: 1.25rem;"><b>Category</b><small class="text-muted">{{$job->Job_category}}</small></span>
-            <span class="d-flex flex-column" style="font-size: 1.25rem;"><b>Location</b><small class="text-muted">{{$job->Job_location}}</small></span>
-            <span class="d-flex flex-column" style="font-size: 1.25rem;"><b>Mode</b><small class="text-muted">{{$job->Job_mode}}</small></span>
-            <span class="d-flex flex-column" style="font-size: 1.25rem;"><b>Deadline</b><small class="text-muted">{{$job->Job_deadline}}</small></span>
-            <span class="d-flex flex-column" style="font-size: 1.25rem;"><b>Visit Us</b><a href="{{$job->Company_url}}" class="text-secondary company-link">{{$job->Company_name}}</a></span>
+            <span class="d-flex flex-column" style="font-size: 1.25rem;"><b>Company</b><small class="text-muted">{{$job->name}}</small></span>
+            <span class="d-flex flex-column" style="font-size: 1.25rem;"><b>Category</b><small class="text-muted">{{$job->category}}</small></span>
+            <span class="d-flex flex-column" style="font-size: 1.25rem;"><b>Location</b><small class="text-muted">{{$job->location}}</small></span>
+            <span class="d-flex flex-column" style="font-size: 1.25rem;"><b>Mode</b><small class="text-muted">{{$job->mode}}</small></span>
+            <span class="d-flex flex-column" style="font-size: 1.25rem;"><b>Deadline</b><small class="text-muted">{{$job->deadline}}</small></span>
+            <span class="d-flex flex-column" style="font-size: 1.25rem;"><b>Visit Us</b><a href="{{$job->url}}" class="text-secondary company-link">{{$job->name}}</a></span>
           </div>
         <hr style="margin-bottom: 2rem;">
 
@@ -54,7 +55,7 @@
             <h2>Skills and Expertise</h2>
             <div class="d-flex flex-wrap justify-content-start" style="max-width: 95%;margin-top: 1rem; gap: 0.75rem;">
                 @php
-                    $skills = explode(',',$job->Job_skills); 
+                    $skills = explode(',',$job->tags); 
                 @endphp
                 @foreach ($skills as $skill)
                 <h4><span class="badge bg-info">{{$skill}}</span></h4>
@@ -78,7 +79,7 @@
         <hr style="margin-bottom: 2rem;">
       </main>
       <div class="container d-flex justify-content-center">
-        <a href="{{url('appliedJobs/'.$job->id.'/'.$logged_in_userId)}}"><button type="button" class="btn btn-info mb-4 my-4 text-white" onclick="return alert('Application Submitted Successfully!!')">Apply Now</button></a>
+        <a href="{{url('apply/'.$job->id)}}"><button type="button" class="btn btn-info mb-4 my-4 text-white">Apply Now</button></a>
       </div>
     </div>
     
